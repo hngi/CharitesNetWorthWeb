@@ -19,7 +19,7 @@ function redirectToPass(){
 	exit();
 }
 function redirectToLogin(){
-	header("Location: login.php");
+	header("Location: signup.html");
 	exit();
 }
 ?>

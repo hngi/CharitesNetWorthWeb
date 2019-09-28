@@ -1,13 +1,13 @@
 <?php 
-require("../process/connection.php");
+require("../includes/db_connection.php");
 $form_email_error = $form_password_error ="";
 $login_email = $login_password ="";
 //Check for login session of user
-if(isset($_SESSION["calcuser"])){
+if(isset($_SESSION["caluser"])){
 	echo "ALREADY_LOGGED_IN";
 	return;
 }
-if(isset($_POST["loginapp"])){
+if(isset($_POST["login"])){
 	
 	function validateForm($info){
 	$info = trim($info);

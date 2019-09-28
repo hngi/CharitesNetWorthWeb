@@ -33,12 +33,12 @@ WHERE email = '$email'";
 				To reset your password please click on the link below:<br>
 					<em>Please note that this password reset link will expire in the next 5mins</em><br>
 				
-				<a href='http://teamhorme.diaticine.com/reset_password.php?email=$email&token=$token'>http://teamhorme.diaticine.com/forget-password.php?email=$email&token=$token</a><br>
+				<a href='https://charites-networthapp.herokuapp.com/reset_password.php?email=$email&token=$token'>https://charites-networthapp.herokuapp.com/forget-password.php?email=$email&token=$token</a><br>
 				
 			
 				<p>Regards,</p>
-				<strong>Darellwest</strong><br>
-				<strong><em>From Team Horme</em></strong>
+				<strong>CharitesFinance</strong><br>
+				<strong><em>Hng Internship6</em></strong>
 				</body>
 				</html>
 				";
@@ -46,8 +46,8 @@ WHERE email = '$email'";
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 			// More headers
-			$headers .= 'From: <darell@teamhorme.diaticine.com>' . "\r\n";
-			$headers .= 'Cc: ewere.njoagwu@gmail.com' . "\r\n";
+			$headers .= 'From: <teamcharites@gmail.com>' . "\r\n";
+			$headers .= 'Cc: pep4joe2010@gmail.com' . "\r\n";
 			if(mail($to,$subject,$message,$headers)){
 				
 				$success = "Please check your email for the password reset link";

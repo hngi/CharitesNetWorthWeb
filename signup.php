@@ -1,7 +1,9 @@
 <?php session_start();
+
 //Proper Database configuration here
 include 'includes/db_connection.php';
 include 'includes/functions.php';
+
 if (isset($_POST['signup'])) {
     $firstname_unsafe = $_POST['firstname'];
     $lastname_unsafe = $_POST['lastname'];
@@ -41,3 +43,4 @@ if (isset($_POST['signup'])) {
 } else {
     header('Location signup.html');
 }
+?>

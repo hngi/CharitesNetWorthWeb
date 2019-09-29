@@ -1,11 +1,9 @@
 <?php
-	$server		 = 'localhost';
-	$user		 = 'root';
-	$password	 = '';
-	$db			 = 'teamcharites';
-	$conn		 = mysqli_connect($server, $user, $password, $db);
-	if(!$conn){
-		die("connection to this database failed: " .mysqli_connect_error());
-	}
-	//echo "Connection successful";
+require_once('config.php');
+// $con = mysqli_connect("localhost", "root", "", "teamcharites");
+$con = mysqli_connect($databaseHost, $databaseUser, $databasePassword, $databaseName);
+// Check connection
+if (mysqli_connect_errno()) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 ?>

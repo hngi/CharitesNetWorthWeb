@@ -4,7 +4,6 @@ if(isset($_POST['submit'])){
     $from = $_POST['email'];
     $name = $_POST['name'];
     $phone = $_POST['number'];
-    $link = "https://charites-networthapp.herokuapp.com";
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = $name . " " . $number . " wrote the following:" . "\n\n" . $_POST['message'];
@@ -17,6 +16,5 @@ if(isset($_POST['submit'])){
     echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     // You cannot use header and echo together. It's one or the other.
-    print "<a href="'.$link.'">Click here to visit site</a>";
     }
 ?>

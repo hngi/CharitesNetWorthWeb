@@ -1,21 +1,21 @@
 <?php session_start();
 
-//Proper Database configuration here
-include 'includes/db_connection.php';
-include 'includes/functions.php';
-
 if (isset($_POST['signup'])) {
-    $firstname_unsafe = $_POST['firstname'];
-    $lastname_unsafe = $_POST['lastname'];
-    $email_unsafe = $_POST['email'];
-    $username_unsafe = $_POST['username'];
-    $pass_unsafe = $_POST['password'];
+    
+    require 'includes/db_connection.php';
+    require 'includes/functions.php';
 
-    $firstname = mysqli_real_escape_string($con, $firstname_unsafe);
-    $lastname = mysqli_real_escape_string($con, $lastname_unsafe);
-    $email = mysqli_real_escape_string($con, $email_unsafe);
-    $username = mysqli_real_escape_string($con, $username_unsafe);
-    $password = mysqli_real_escape_string($con, $pass_unsafe);
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $firstname = mysqli_real_escape_string($con, $firstname);
+    $lastname = mysqli_real_escape_string($con, $lastname);
+    $email = mysqli_real_escape_string($con, $email);
+    $username = mysqli_real_escape_string($con, $username);
+    $password = mysqli_real_escape_string($con, $password);
     
     //Validation
     //check if email exists

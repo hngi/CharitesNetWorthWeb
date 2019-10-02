@@ -90,7 +90,7 @@ nav li {
 	align-items: center;
 	background-color:#ecf9f2;
 	/*border: 1px solid #bbdee0;*/
-	height: 400px;
+	height: 600px !important;
 	width: 400px;
     /*border-radius: 30px;*/
 }
@@ -371,7 +371,7 @@ footer {
 		align-items: center;
 		background-color:#ecf9f2;
 		/*border: 1px solid #bbdee0;*/
-		height: 400px;
+		height: 600px !Important;
 		width: auto;
 
 	}

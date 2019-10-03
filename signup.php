@@ -7,14 +7,14 @@ if (isset($_POST['signup'])) {
 
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
+    $username = $_POST['username']
     $email = $_POST['email'];
-    $username = $_POST['username'];
     $password = $_POST['password'];
 
     $firstname = mysqli_real_escape_string($con, $firstname);
     $lastname = mysqli_real_escape_string($con, $lastname);
-    $email = mysqli_real_escape_string($con, $email);
     $username = mysqli_real_escape_string($con, $username);
+    $email = mysqli_real_escape_string($con, $email);
     $password = mysqli_real_escape_string($con, $password);
     
     //Validation
@@ -34,7 +34,7 @@ if (isset($_POST['signup'])) {
         $res = mysqli_query($con, "INSERT INTO users SET firstname = '$firstname', lastname = 'lastname', username = '$username', email = '$email', password = '$password',") or die(mysqli_error($con));
         if ($res) {
             addAlert('success', 'Registration Successful! Please Login');
-            echo "<script type='text/javascript'>document.location='signup.html'</script>";
+            echo "<script type='text/javascript'>document.location='index.html'</script>";
         } else {
             addAlert('error', 'Something went wrong!');
             echo "<script type='text/javascript'>document.location='signup.html'</script>";
